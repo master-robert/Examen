@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Creando VM....."
+–connect qemu:///system
+-n KVM-Ubuntu
+-r 1024 
+–os-type linux
+–os-variant ubuntu
+–hvm
+–cdrom /home/user/isos/ubuntu-14-04.iso
+–network network:default
+–disk path=/home/user/vms/ubuntu.img,size=20
